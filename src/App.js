@@ -28,7 +28,7 @@ function App() {
     // console.log(item);
 
     return (
-      <BlogCard key={pos} />
+      <BlogCard key={pos} title={item.title} description={item.description} id={item.id} />
       // <div className="box1style" key={item.id} >
       //   <h3>{item.title} </h3>
       //   <p> {item.description} </p>
