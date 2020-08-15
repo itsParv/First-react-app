@@ -5,28 +5,39 @@ import './App1.css';
 
 
 function App() {
-  const blogObject = {
-    title: 'Blog Title 1',
-    description: 'Lorem Ipsum Dolo Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor'
-  }
+  const blogArr = [
+    {
+      id: 1,
+      title: 'Blog Title 1',
+      description: 'Lorem Ipsum Dolo Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor'
+    },
+    {
+      id: 2,
+      title: 'Blog Title 2',
+      description: 'Lorem Ipsum Dolo Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor'
+    },
+    {
+      id: 3,
+      title: 'Blog Title 3',
+      description: 'Lorem Ipsum Dolo Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor'
+    }
+  ]
+
+  const blogCards = blogArr.map((item) => {
+    console.log(item);
+
+    return (
+      <div className="box1style" key={item.id} >
+        <h3>{item.title} </h3>
+        <p> {item.description} </p>
+      </div>
+    )
+
+  })
 
   return (
     <div className="App">
-      <div className="box1style">
-        <h3> {blogObject.title}</h3>
-        <p> {blogObject.description} </p>
-      </div>
-
-      <div className="box1style">
-        <h3> {blogObject.title}</h3>
-        <p> {blogObject.description} </p>
-      </div>
-
-
-      <div className="box1style">
-        <h3> {blogObject.title}</h3>
-        <p> {blogObject.description} </p>
-      </div>
+      {blogCards}
 
     </div>
   );
