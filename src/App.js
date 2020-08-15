@@ -47,17 +47,19 @@ class App extends React.Component {
   })
 
   onHideButtonCLick = () => {
-    this.setState({ showBlogs: false });
-    console.log(this.showBlogs);
-
-    alert('Button Clicked')
+    // let updatedState = !this.state.showBlogs
+    // console.log("Updated value", updatedState)
+    // this.setState({ showBlogs: updatedState });
+    this.setState((prevState, prevProps) => {
+      return { showBlogs: !prevState.showBlogs }
+    });
 
   }
 
   render() {
     return (
       <div className="App" >
-        <button onClick={this.onHideButtonCLick}>Hide List</button>
+        <button onClick={this.onHideButtonCLick}> {this.state.showBlogs ? 'Hide Blog' : 'Show Blog'}  </button>
         <br></br>
         {this.state.showBlogs ? this.blogCards : null}
 
