@@ -3,52 +3,52 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-
-  // Labels consts
-  const firstName = 'Lucifer';
-  const lastName = 'Morningstar';
-  const age = 32;
-  const job = 'Anonymous';
-
-  // Input consts
-  const inputPlaceholde = "Enter Your Details";
-
-  // Objects
-
-  const mObj = {
-    name: "Luctifer",
-    age: 32,
-    job: 'Anonymous'
+  const blogObject = {
+    title: 'Blog Title 1',
+    description: 'Lorem Ipsum Dolo Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor'
   }
-
-  // Arrays
-  const mArr = [1, 2, 3, 4, 5];
-
-  // tags with const
-  const detailsInputBox = <input placeholder={inputPlaceholde} autoComplete />
-
-  // functions
-  const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;
 
   return (
     <div className="App">
+      <div>
+        <h3> {blogObject.title}</h3>
+        <p> {blogObject.description} </p>
+      </div>
+      <hr />
 
-      <h3> Full Name: {`${firstName} ${lastName}`} </h3>
-      <h3> Full Name: {getFullName(firstName, lastName)} </h3>
-      <h3>Full Name : {mObj.name} </h3>
-      <p> Age : {age} </p>
-      <p> Job : {job}</p>
+      <div>
+        <h3> {blogObject.title}</h3>
+        <p> {blogObject.description} </p>
+      </div>
+      <hr />
 
-      {detailsInputBox}
-
-      {mArr[0]}
-
-      {
-        mArr[0] > 0 ? "True" : "False"
-      }
+      <div>
+        <h3> {blogObject.title}</h3>
+        <p> {blogObject.description} </p>
+      </div>
+      <hr />
 
     </div>
   );
+
+
+  //  Pure react code of above return statement is given below
+
+  // React.createElement("div", {
+  //   className: "App"
+  // },
+  //   React.createElement("div", null,
+  //     React.createElement("h3", null, " ", blogObject.title),
+  //     React.createElement("p", null, " ", blogObject.description, " ")),
+  //   React.createElement("hr", null),
+  //   React.createElement("div", null,
+  //     React.createElement("h3", null, " ", blogObject.title),
+  //     React.createElement("p", null, " ", blogObject.description, " ")),
+  //   React.createElement("hr", null),
+  //   React.createElement("div", null,
+  //     React.createElement("h3", null, " ", blogObject.title),
+  //     React.createElement("p", null, " ", blogObject.description, " ")),
+  //   React.createElement("hr", null)));
 }
 
 export default App;
