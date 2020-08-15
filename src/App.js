@@ -3,6 +3,7 @@ import logo from './logo.svg';
 // import './App.css';
 import './App1.css';
 import BlogCard from './BlogCard';
+import { isArrayEmpty } from './Utils';
 
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
     }
   ]
 
-  const blogCards = blogArr.map((item, pos) => {
+  // const blogArr = null;
+
+  const blogCards = isArrayEmpty(blogArr) ? [] : blogArr.map((item, pos) => {
     // console.log(item);
 
     return (
