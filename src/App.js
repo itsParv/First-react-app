@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import './App1.css';
+
 
 function App() {
   const blogObject = {
@@ -10,23 +12,21 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="box1style">
         <h3> {blogObject.title}</h3>
         <p> {blogObject.description} </p>
       </div>
-      <hr />
 
-      <div>
+      <div className="box1style">
         <h3> {blogObject.title}</h3>
         <p> {blogObject.description} </p>
       </div>
-      <hr />
 
-      <div>
+
+      <div className="box1style">
         <h3> {blogObject.title}</h3>
         <p> {blogObject.description} </p>
       </div>
-      <hr />
 
     </div>
   );
