@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-// import './App.css';
-import './App1.css';
+import './App.css';
+// import './App1.css';
 import BlogCard from './BlogCard';
 import { isArrayEmpty } from './Utils';
 
